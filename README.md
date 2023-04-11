@@ -1,4 +1,4 @@
-
+###Info page for Super Chef, an app created for the Penn State Harrisburg Computer Science Capstone Project
 
 <!--
 **superchefapp/superchefapp** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
