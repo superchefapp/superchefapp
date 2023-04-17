@@ -1,81 +1,294 @@
+
 <!DOCTYPE html>
 <html>
-<style>
+  <head>
 
-html, body {
-    margin: 0;
-    height: 100%;
-}
-
-div {
-
-	margin: 10px;
-}
-
-h1 {
-text-align: center;
-}
-
+    <style> 
+/* Set default font styles */
 body {
-
-font-family: Verdana;
-border: 0px solid rgba(100, 100, 100, 1);
-  border-radius: 24px;
-  background:
-    radial-gradient(
-      93% 93% at 8% 128%,
-      rgba(255, 238, 194, 1) 0%,
-      rgba(255, 238, 194, 0.2) 60%,
-      rgba(194, 233, 255, 0) 100%
-    ),
-    radial-gradient(
-      49% 88% at 27% -14%,
-      rgba(93, 227, 236, 0.73) 0%,
-      rgba(93, 227, 236, 0.17) 60%,
-      rgba(93, 227, 236, 0) 100%
-    ),
-    radial-gradient(
-      115% 156% at 90% 89%,
-      rgba(75, 254, 222, 1) 0%,
-      rgba(75, 254, 222, 0) 100%
-    ),
-    linear-gradient(
-      234deg,
-      rgba(69, 74, 187, 1) 25%,
-      rgba(69, 74, 187, 0.77) 35%,
-      rgba(69, 74, 187, 0.4) 50%,
-      rgba(91, 196, 229, 0) 84%
-    ),
-    radial-gradient(
-      119% 119% at 3% 26%,
-      rgba(48, 142, 230, 1) 0%,
-      rgba(48, 158, 230, 0) 74%
-    ),
-    linear-gradient(
-      360deg,
-      rgba(242, 245, 250, 1) 0%,
-      rgba(242, 245, 250, 1) 100%
-    );
-  background-blend-mode: , , , , , ;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
-</style>
- <head>
-   <title>Super Chef App</title>
- </head>
- <body>
-   <div class=”container”>
-     <div class=”blurb”>
-       <h1>Super Chef</h1>
-       <p><a href="https://github.com/SamiAlmouzani/Recipe_Generator">Super Chef</a> is a web application built using the <a href = https://create.t3.gg/>T3 Stack</a>. It utilizes OpenAI's API to generate recipes based on your ingredients. With Super Chef you can save and comment on the recipes you like, interact with other users, and upload your own recipes. Super Chef is designed to make it easier than ever to find the perfect recipe right when you need it.</p>
-     </div>
-   </div>
 
-   <footer>
-   <ul>
+/* Set header styles */
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Set main styles */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+        .gallery {
+            display: flex;
+            flex-wrap:nowrap;
+            overflow-x:scroll;
+            padding-right:500px;
+            scroll-behavior: smooth;
+        }
+        #contact {
+  background-color: #fff;
+  color: #333;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 16px;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px
+        }
+
+
+       
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* for iOS */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* for IE */
+  scroll-snap-type: x mandatory;
+  -webkit-scroll-snap-type: x mandatory; /* for Safari, Chrome, and Opera */
+  -ms-scroll-snap-type: mandatory-x; /* for IE */
+}
+
+.gallery-scroll img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  -webkit-scroll-snap-align: start; /* for Safari, Chrome, and Opera */
+  -ms-scroll-snap-align: start; /* for IE */
+}
+.gallery-container {
+  height: 1000px; /* adjust as needed */
+    max-width: 1200px;
+    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+        
+        .gallery-container img {
+              max-width:100%;
+              max-height:100%;
+        }
+        
+        .gallery-container2 doc {
+            max-width:100%;
+            max-height:100%;
+        }
+
+        .doc {
+            
+              flex-shrink: 0;
+  width: 600px;
+  height: 1000px;
+  scroll-snap-align: start;
+  -webkit-scroll-snap-align: start; /* for Safari, Chrome, and Opera */
+  -ms-scroll-snap-align: start; /* for IE */
+        }
+       
+.gallery-scroll2 {
+  display: flex;
+  overflow-x: auto;
+  
+  -webkit-overflow-scrolling: touch; /* for iOS */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* for IE */
+  scroll-snap-type: x mandatory;
+  -webkit-scroll-snap-type: x mandatory; /* for Safari, Chrome, and Opera */
+  -ms-scroll-snap-type: mandatory-x; /* for IE */
+}
+
+.gallery-scroll2 doc {
+
+}
+.gallery-container2 {
+  height: 1000px; /* adjust as needed */
+    width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}            
+
+
+       
+
+.gallery-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background-color: red;
+}
+        
+        .gallery-scroll2::-webkit-scrollbar {
+  width: 10px;
+}
+
+.gallery-scroll2::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.gallery-scroll2::-webkit-scrollbar-thumb {
+  background-color: red;
+}
+        
+        
+    
+
+
+    </style> 
+    <meta charset="utf-8">
+    <title>Super Chef</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Super Chef</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#documentation">Documentation</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About</h2>
+          <p><a href="https://github.com/SamiAlmouzani/Recipe_Generator">Super Chef</a> is a web application built using the <a href = "https://create.t3.gg">T3 Stack</a>. It utilizes OpenAI's API to generate recipes based on your ingredients. With Super Chef you can save and comment on the recipes you like, interact with other users, and upload your own recipes. Super Chef is designed to make it easier than ever to find the perfect recipe right when you need it.</p>
+      </section>
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+           
+          <div class="gallery-scroll">
+        
+            <img src="assets/images/gallery2.png">
+            <img src="assets/images/gallery3.png">
+            <img src="assets/images/gallery4.png">
+          </div>
+
+        </div>
+      </section>
+      <section id="documentation">
+        <h2>Documentation</h2>
+        <div class="gallery-container2">
+          <div class="gallery-scroll2">
+            <div class="doc">
+                <p>Robustness Diagram</p>
+                <img class ="doc_img" src = "assets/images/robustness_diagram.png"> 
+            </div>
+            <div class="doc">
+                <p>Use Case Diagram</p>
+                <img class ="doc_img" src = "assets/images/use_case_diagram.png"> 
+            </div>
+            <div class="doc">
+                <p>Domain Model</p>
+                <img  class ="doc_img"src = "assets/images/domain_model.png">
+            </div>
+            <div class="doc">
+                <p>Class Model</p>
+                <img  class ="doc_img"src = "assets/images/class_model.png">
+            </div>
+            <div class="doc">
+                <p>Database Design</p>
+               <img  class ="doc_img"src = "assets/images/robustness_diagram.png">
+            </div>
+          </div>     
+        </div>
+      </section>
+    <section id="contact">
+  <h2>Contact Us</h2>
+  <form action="mailto:superchefapp@gmail.com" method="post" enctype="text/plain">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+</section>
+    </main>
+    <footer>
+         <ul>
     <li><p>Super Chef was created by <a href = "https://github.com/SamiAlmouzani">Sami Almouzani</a>, <a href = "https://github.com/djm-2000">Dean McGahan</a>, <a href = "https://github.com/lilys42">Lily Sica</a> and <a href = "https://github.com/SQureshi123">Shiza Qureshi</a></p></li>
-    <li><p>Have feedback? Message us at</p>superchefapp@gmail.com</li>
    </ul>
-   </footer>
+      <p>&copy; Super Chef</p>
+    </footer>
 
- </body>
+  </body>
 </html>
